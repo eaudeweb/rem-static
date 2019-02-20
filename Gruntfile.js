@@ -13,6 +13,15 @@ module.exports = function(grunt) {
                 }
             }
         },
+				concat: {
+					options: {
+						separator: ';',
+					},
+					dist: {
+						src: 'src/js/*.js',
+						dest: 'dist/main.js',
+					},
+				},
         watch: {
             styles: {
                 files: ['src/less/**/*.less'], // which files to watch
@@ -22,14 +31,11 @@ module.exports = function(grunt) {
                 }
             },
             scripts: {
-                files: 'src/js/main.js',
-                tasks: ['browserify'],
-                options: {
-                    interrupt: true,
-                },
+                files: 'src/js/*.js',
+                tasks: ['concat'],
             },
 
         },
     });
-    grunt.registerTask('default', ['less', 'watch']);
+    grunt.registerTask('default', ['less', 'concat', 'watch']);
 };
