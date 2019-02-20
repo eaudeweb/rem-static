@@ -6,7 +6,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Page Title</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<script src="dist/main.js"></script>
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
 	<link href="https://fonts.googleapis.com/css?family=Poppins:700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
 	<!-- Latest compiled and minified CSS -->
@@ -24,13 +25,14 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-
+					
 							<div class="site-heading">
+								<div class="over-h1">
+									Alt det nye
+								</div>
 								<h1>
-									Title Here
+									Aktuelt
 								</h1>
-								<hr class="small">
-								<span id="portal-slogan" class="subheading">Type your slogan here</span>
 							</div>
 
 						</div>
@@ -44,8 +46,18 @@
 		<div id="mainnavigation">
 			<!-- Navigation -->
 			<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
-				<div class="container-fluid">
+				<div class="container container-large">
 					<!-- Brand and toggle get grouped for better mobile display -->
+
+
+					 <ul class="nav navbar-nav above-menu">
+						 <li><a href="">Kontakt</a></li>
+						 <li><a href="">Radet</a></li>
+						 <li><a href="">Kalender</a></li>
+						 <li><a href=""><i class="fa fa-search" aria-hidden="true"></i></a></li>
+
+					 </ul>
+
 					<div class="navbar-header page-scroll">
 						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
 							data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -55,14 +67,16 @@
 							<span class="icon-bar"></span>
 						</button>
 						<a id="portal-logo" title="Site" href="https://rem.edw.ro">
-							<img src="https://rem.edw.ro/@@site-logo/rem-logo.png" alt="Rådet for etniske minoriteter"
+							<img src="src/img/logo.png" alt="Rådet for etniske minoriteter"
 								title="Rådet for etniske minoriteter"></a>
 					</div>
 
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" aria-expanded="false"
 						style="height: 340px;">
-						<ul class="nav navbar-right search-box">
+
+
+						<ul class="nav search-box">
 							<li>
 								<div id="portal-searchbox">
 
@@ -98,12 +112,14 @@
 						<ul class="nav navbar-nav navbar-right">
 
 							<li id="portaltab-radet">
-								<a href="https://rem.edw.ro/radet" title="">Om rådet</a>
+								<a href="https://rem.edw.ro/radet" title="">Rådet</a>
 							</li>
 
-							<li id="portaltab-radet-mener" class="selected">
-								<a href="https://rem.edw.ro/radet-mener" title="">Rådet mener</a>
+
+							<li id="portaltab-indsatsomrader-1">
+								<a href="https://rem.edw.ro/indsatsomrader-1" title="">Indsatsområder</a>
 							</li>
+						
 
 							<li id="portaltab-news">
 								<a href="https://rem.edw.ro/news" title="">Aktuelt</a>
@@ -113,23 +129,10 @@
 								<a href="https://rem.edw.ro/publikationer" title="">Publikationer</a>
 							</li>
 
-							<li id="portaltab-indsatsomrader-1">
-								<a href="https://rem.edw.ro/indsatsomrader-1" title="">Indsatsområder</a>
-							</li>
-
 							<li id="portaltab-netvaerk">
 								<a href="https://rem.edw.ro/netvaerk" title="">Netværk</a>
 							</li>
 
-
-
-							<li>
-
-								<a title="Log in"
-									data-pat-plone-modal="{&quot;prependContent&quot;: &quot;.portalMessage&quot;, &quot;title&quot;: &quot;Log in&quot;, &quot;width&quot;: &quot;26em&quot;, &quot;actionOptions&quot;: {&quot;redirectOnResponse&quot;: true}}"
-									id="personaltools-login" href="https://rem.edw.ro/login" class="pat-plone-modal">Log in</a>
-
-							</li>
 
 						</ul>
 					</div>
@@ -165,6 +168,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
 		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
 		crossorigin="anonymous"></script>
+	<script src="dist/main.js"></script>
 
 </body>
 
