@@ -9,17 +9,16 @@ module.exports = function(grunt) {
                     optimization: 2
                 },
                 files: {
-                    "dist/main.css": "src/less/main.less" // destination file and source file
+                    "css/main.css": "src/less/main.less" // destination file and source file
                 }
             }
         },
-				concat: {
-					options: {
-						separator: ';',
-					},
-					dist: {
-						src: 'src/js/*.js',
-						dest: 'dist/main.js',
+				copy: {
+					main: {
+						files: [
+							// includes files within path
+							{expand: true,flatten: true, src: ['src/js/**.js'], dest: 'js'},
+						],
 					},
 				},
         watch: {
@@ -31,11 +30,11 @@ module.exports = function(grunt) {
                 }
             },
             scripts: {
-                files: 'src/js/*.js',
-                tasks: ['concat'],
+                files: 'src/js/*',
+                tasks: ['copy'],
             },
 
         },
     });
-    grunt.registerTask('default', ['less', 'concat', 'watch']);
+    grunt.registerTask('default', ['less', 'copy', 'watch']);
 };

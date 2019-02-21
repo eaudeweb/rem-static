@@ -1,4 +1,13 @@
 
+
+/*======= COLORS =======*/
+@smalt-blue:  #557286;
+@aluminium:   #575557;
+@dark-teal:   #335951;
+@body-text:   #575557;
+@peach:       #DB9681;
+@dark:        #383838;
+
 body {
 	font-family: 'Lato', sans-serif;
 	font-weight: 300;
@@ -44,4 +53,35 @@ h4 {
 
 h5 {
 	font-size: 22px;
+}
+
+.over-h1,
+.under-heading,
+.over-heading {
+	font-family: 'Nothing You Could Do', cursive;
+}
+
+.over-h1 {
+	font-size: 36px;
+}
+
+.under-heading,
+.over-heading {
+	font-size: 28px;
+}
+
+.container-large {
+	@media (min-width: 1500px) {
+		width: 1440px;
+	}
+}
+
+.dark-teal {
+  background: @dark-teal;
+  color: #FFFFFF;
+}
+
+.peach {
+  background: @peach;
+  color: #FFFFFF;
 }
