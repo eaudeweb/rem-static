@@ -14,14 +14,20 @@ module.exports = function(grunt) {
                 }
             }
         },
-				copy: {
-					main: {
-						files: [
-							// includes files within path
-							{expand: true,flatten: true, src: ['src/js/**.js'], dest: 'js'},
-						],
+				concat: {
+					basic: {
+						src: [ 'src/js/masonry.pkgd.js', 'src/js/flickity.pkgd.min.js', 'src/js/flickity-fade.js', 'src/js/main.js'],
+						dest: 'js/main.js',
 					},
 				},
+				// copy: {
+				// 	main: {
+				// 		files: [
+				// 			// includes files within path
+				// 			{expand: true,flatten: true, src: ['src/js/**.js'], dest: 'js'},
+				// 		],
+				// 	},
+				// },
         watch: {
             styles: {
                 files: ['src/less/**/*.less'], // which files to watch
@@ -32,10 +38,10 @@ module.exports = function(grunt) {
             },
             scripts: {
                 files: 'src/js/*',
-                tasks: ['copy'],
+                tasks: ['concat'],
             },
 
         },
     });
-    grunt.registerTask('default', ['less', 'copy', 'watch']);
+    grunt.registerTask('default', ['less', 'concat', 'watch']);
 };
