@@ -6,7 +6,8 @@ module.exports = function(grunt) {
                 options: {
                     compress: false,
                     yuicompress: false,
-                    optimization: 2
+                    optimization: 2,
+										sourceMap: true
                 },
                 files: {
                     "css/main.css": "src/less/main.less" // destination file and source file
