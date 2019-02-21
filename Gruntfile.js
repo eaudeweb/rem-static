@@ -16,7 +16,7 @@ module.exports = function(grunt) {
         },
 				concat: {
 					basic: {
-						src: [ 'src/js/masonry.pkgd.js', 'src/js/flickity.pkgd.min.js', 'src/js/flickity-fade.js', 'src/js/main.js'],
+						src: 'src/js/**',
 						dest: 'js/main.js',
 					},
 				},
